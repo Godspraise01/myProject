@@ -58,6 +58,10 @@
             <input type="password" name="password" placeholder="Password" id="password" required>
             <input type="submit" value="Login">
         </form>
+            <div class="msgDisplay" align="center">
+    			Not Yet A Member?: <a href="register.php">Join Us Now!</a>
+            </div>
     </div>
+            
 </body>
 </html>

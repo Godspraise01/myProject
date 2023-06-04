@@ -70,6 +70,9 @@
             <input type="email" name="email" placeholder="Email" id="email" required>
             <input type="submit" value="Register">
         </form>
+        <div class="msgDisplay" align="center">
+    			Already Registered?: <a href="login.php">Login Now!</a>
+        </div>
     </div>
 </body>
 </html>

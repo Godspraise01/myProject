@@ -8,7 +8,7 @@ A Web Application of an Online Shopping Store with FrontEnd, User Authentication
 
 ## Authors
 
-- [@Godspraise1](https://www.github.com/Godspraise1)
+- [@Godspraise01](https://www.github.com/Godspraise01)
 
 
 ## Demo

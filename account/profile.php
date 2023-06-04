@@ -18,31 +18,29 @@ $stmt->fetch();
 $stmt->close();
 ?>
 
+<?php include_once('upload.php') ?>
+
 <?=template_header('Profile')?>
 
 	<body class="loggedin">
 		<div class="content">
 				<h2>Profile Page</h2>
-		<span class="msgDisplay">
-            <div class="emsg">
-                <?php
-                 echo $statusMsg = '';
-                ?>
+		
+		<?php
+		//This handles profile Picture Upload Response
+		 if (!empty($statusMsg)): ?>
+            <div class="alert <?php echo $statusMsg ?>" role="alert">
+              <?php echo $statusMsg; ?>
             </div>
-        </span>
+        <?php endif; ?>
 		
 			<div>
 				<p>Your account details are below:</p>
 				<table>
 					<tr>
-					<?php
-        				$imageURL = 'uploads/'.$profile_pic;
-					?>
-    					<img src="<?php echo $imageURL; ?>" alt="" />
-					<?php { ?>
-    						<p>No Profile image Yet...</p>
-						<?php } ?>
+						<td> <img src="<?php echo 'uploads/' . $profile_pic ?>" width="90" height="90" alt=""> </td>
 					</tr>
+					
 					<tr>
 						<td>Username:</td>
 						<td><?=$_SESSION['name']?></td>
@@ -61,9 +59,9 @@ $stmt->close();
 					</tr>
 				</table>
 			</div>
-			<form action="upload.php" method="post" enctype="multipart/form-data">
+			<form action="index.php?page=profile" method="post" enctype="multipart/form-data">
     			Select Image File to Upload:
-    			<input type="file" name="fileToUpload">
+    			<input type="file" name="anyfile" id="anyfile">
     			<input type="submit" name="submit" value="Upload">
 			</form>
 		</div>

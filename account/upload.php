@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else{
                 if(move_uploaded_file($_FILES["anyfile"]["tmp_name"], "uploads/" . $filename)){
 
-                    $sql="UPDATE users SET profile_pic = '$filename'";
+                    $sql="UPDATE users SET profile_pic = '$filename' WHERE id = '$_SESSION[id]'";
                     
                     mysqli_query($conn,$sql);
 

@@ -60,7 +60,7 @@ $stmt->close();
 				</table>
 			</div>
 			<form action="index.php?page=profile" method="post" enctype="multipart/form-data">
-    			Select Image File to Upload:
+    			Select Image File to Upload As Your Profile Picture:
     			<input type="file" name="anyfile" id="anyfile">
     			<input type="submit" name="submit" value="Upload">
 			</form>

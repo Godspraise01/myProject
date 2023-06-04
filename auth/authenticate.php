@@ -42,7 +42,7 @@ if ($stmt->num_rows > 0) {
             $users['activation_code'] == 'activated';
                 // account is activated
                 // Display home page etc
-                header('Location: ../account/home.php');
+                header('Location: ../account/index.php?page=home');
         } else {
             // Incorrect password
             $msg = "Incorrect username and/or password Or Email Address Not Yet Verified!";
